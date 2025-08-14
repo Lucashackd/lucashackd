@@ -1,9 +1,10 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 function About() {
   return (
     <div id="about" className="container m-auto p-4">
+      <h2 className="text-gradient border-amber-200">About Me</h2>
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-6 lg:h-73 xl:h-69">
         <Card className="py-0 overflow-clip aspect-square">
           <CardContent className="px-0 w-fit h-fit">

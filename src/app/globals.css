@@ -132,8 +132,15 @@
     cursor: pointer;
   }
 
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-self: center;
+    margin-bottom: 0.5rem;
+  }
+
   .glass-effect {
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(46, 16, 101, 0.65);
     box-shadow: inset -1px -1px 4px rgba(94, 94, 94, 0.5),
       inset 1px 1px 4px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);

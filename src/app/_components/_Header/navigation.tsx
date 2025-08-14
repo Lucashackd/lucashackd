@@ -136,7 +136,7 @@ function Navigation() {
             <Link href={"#curriculum"}>
               <Button className="bg-gradient-to-br from-sky-300 to-rose-300 font-semibold text-violet-900 hover:from-rose-300 hover:to-sky-300 transition-colors ease-in-out duration-800">
                 <HiOutlineDownload />
-                CSurriculum
+                Curriculum
               </Button>
             </Link>
           </li>

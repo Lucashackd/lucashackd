@@ -3,7 +3,7 @@ import Header from "./_components/_Header/header";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col space-y-10">
       <header>
         <Header />
       </header>
@@ -15,6 +15,6 @@ export default function Home() {
       </main>
 
       <footer></footer>
-    </>
+    </div>
   );
 }
