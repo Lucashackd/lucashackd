@@ -140,7 +140,7 @@
   }
 
   .glass-effect {
-    background-color: rgba(46, 16, 101, 0.65);
+    background-color: rgba(76, 29, 149, 0.75);
     box-shadow: inset -1px -1px 4px rgba(94, 94, 94, 0.5),
       inset 1px 1px 4px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
