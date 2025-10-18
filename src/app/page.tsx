@@ -1,5 +1,6 @@
 import About from "./_components/_About/about";
 import Header from "./_components/_Header/header";
+import Skills from "./_components/_Skills/skills";
 
 export default function Home() {
   return (
@@ -11,6 +12,10 @@ export default function Home() {
       <main>
         <section>
           <About />
+        </section>
+
+        <section>
+          <Skills />
         </section>
       </main>
 
