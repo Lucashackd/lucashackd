@@ -3,7 +3,7 @@ import Navigation from "./navigation";
 
 function Header() {
   return (
-    <div className="container m-auto p-4">
+    <div id="header" className="container m-auto p-4">
       <Card>
         <CardContent>
           <div className="flex items-center justify-between">

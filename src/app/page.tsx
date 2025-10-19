@@ -1,5 +1,6 @@
 import About from "./_components/_About/about";
 import Header from "./_components/_Header/header";
+import Projects from "./_components/_Projects/projects";
 import Skills from "./_components/_Skills/skills";
 
 export default function Home() {
@@ -16,6 +17,10 @@ export default function Home() {
 
         <section>
           <Skills />
+        </section>
+
+        <section>
+          <Projects />
         </section>
       </main>
 
