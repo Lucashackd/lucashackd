@@ -41,7 +41,7 @@ export const Frameworks: Skill[] =
     level: 85
   },
   {
-    icon: "/images/Nodejs.svg",
+    icon: "/images/NodeJs.svg",
     name: "Node.js",
     level: 90
   },
@@ -94,7 +94,7 @@ export const Databases: Skill[] =
 export const Tools: Skill[] =
 [
   {
-    icon: "/images/Api.svg",
+    icon: "/images/API.svg",
     name: "API",
     level: 95
   },
