@@ -10,7 +10,7 @@ function Item({ skill }: { skill: Skill[] }) {
     >
       <div className="flex justify-start items-center gap-2 h-full w-fit">
         <Image src={s.icon} alt={s.name} width={19.07} height={19.07} />
-        <span>{s.name}</span>
+        <span className="text-sm 2xl:text-base">{s.name}</span>
       </div>
       <div className="flex justify-end items-center gap-0.5 max-w-1/2 h-full w-full">
         <Progress

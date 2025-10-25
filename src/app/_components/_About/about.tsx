@@ -20,8 +20,8 @@ function About() {
         </Card>
         <Card className="flex-1 justify-center">
           <CardContent>
-            <p className="text-white text-justify text-base xl:text-lg">
-              Full stack developer with a strong academic foundation and
+            <p className="text-white text-justify text-base xl:text-lg text-shadow-[2px_2px_0.5px_rgba(0,0,0,0.5)]">
+              Full Stack developer with a strong academic foundation and
               hands-on experience in web and mobile technologies. Passionate
               about building complete and scalable solutions, from UI to
               server-side logic, always combining clean code with user-centered
