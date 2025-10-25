@@ -1,7 +1,3 @@
-import { IconType } from "react-icons";
-import { FiYoutube, FiGithub } from "react-icons/fi";
-import { IoLink } from "react-icons/io5";
-
 interface ProjectLink {
   type: "video" | "website" | "github";
   url: URL;
