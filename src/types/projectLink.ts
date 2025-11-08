@@ -3,16 +3,14 @@ interface ProjectLink {
   url: URL;
 }
 
-export const MyComedyTubeLinks: ProjectLink[] = 
-[
+export const MyComedyTubeLinks: ProjectLink[] = [
   {
     type: "website",
     url: new URL("https://my-comedy-tube-3a891e3a55ba.herokuapp.com/"),
   },
-]
+];
 
-export const RealStateLinks: ProjectLink[] = 
-[
+export const RealStateLinks: ProjectLink[] = [
   {
     type: "website",
     url: new URL("https://imobiliaria-sistema-de-gestao.vercel.app/"),
@@ -20,7 +18,7 @@ export const RealStateLinks: ProjectLink[] =
   {
     type: "github",
     url: new URL("https://github.com/Lucashackd/Imobiliaria-Sistema-de-Gestao"),
-  }
-]
+  },
+];
 
 export default ProjectLink;

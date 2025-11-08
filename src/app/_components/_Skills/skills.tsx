@@ -3,9 +3,9 @@ import SkillCard from "./_skillCard";
 
 function Skills() {
   return (
-    <div id="skills" className="container m-auto p-4 gap-2 h-fit">
+    <div id="skills" className="container m-auto h-fit gap-2 p-4">
       <h2 className="text-gradient">Skills</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 h-fit">
+      <div className="grid h-fit grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         <SkillCard title="Programming Languages" skillList={Languages} />
         <SkillCard title="Frameworks & Libraries" skillList={Frameworks} />
         <SkillCard title="Databases" skillList={Databases} />

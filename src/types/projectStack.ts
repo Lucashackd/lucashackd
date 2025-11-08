@@ -3,60 +3,58 @@ interface ProjectStack {
   name: string;
 }
 
-export const MyComedyTubeStack: ProjectStack[] =
-[
+export const MyComedyTubeStack: ProjectStack[] = [
   {
     icon: "/images/Php.svg",
-    name: "PHP"
+    name: "PHP",
   },
   {
     icon: "/images/Laravel.svg",
-    name: "Laravel"
+    name: "Laravel",
   },
   {
     icon: "/images/Javascript.svg",
-    name: "JavaScript"
+    name: "JavaScript",
   },
   {
     icon: "/images/TailwindCss.svg",
-    name: "Tailwind CSS"
+    name: "Tailwind CSS",
   },
   {
     icon: "/images/MySQL.svg",
-    name: "MySQL"
+    name: "MySQL",
   },
   {
     icon: "/images/Figma.svg",
-    name: "Figma"
+    name: "Figma",
   },
   {
     icon: "/images/Git.svg",
-    name: "Git"
-  }
-]
+    name: "Git",
+  },
+];
 
-export const RealStateStack: ProjectStack[] =
-[
+export const RealStateStack: ProjectStack[] = [
   {
     icon: "/images/Javascript.svg",
-    name: "JavaScript"
+    name: "JavaScript",
   },
   {
     icon: "/images/React.svg",
-    name: "React"
+    name: "React",
   },
   {
     icon: "/images/Firebase.svg",
-    name: "Firebase"
+    name: "Firebase",
   },
   {
     icon: "/images/TailwindCss.svg",
-    name: "Tailwind CSS"
+    name: "Tailwind CSS",
   },
   {
     icon: "/images/Git.svg",
-    name: "Git"
-  }
-]
+    name: "Git",
+  },
+];
 
 export default ProjectStack;

@@ -12,14 +12,14 @@ function ProjectCard(project: ProjectCard) {
   };
 
   return (
-    <div className="flex flex-col justify-start items-start w-full h-full">
-      <div className="flex justify-center items-stretch w-full h-full rounded-t-sm overflow-clip">
-        <div className="flex flex-col justify-start items-start w-full h-full gap-2 p-2 glass-effect shadow-none">
-          <div className="flex justify-start items-center w-full h-fit">
+    <div className="flex h-full w-full flex-col items-start justify-start">
+      <div className="flex h-full w-full items-stretch justify-center overflow-clip rounded-t-sm">
+        <div className="glass-effect flex h-full w-full flex-col items-start justify-start gap-2 p-2 shadow-none">
+          <div className="flex h-fit w-full items-center justify-start">
             <h3 className="font-medium text-amber-200">{project.title}</h3>
           </div>
-          <div className="flex justify-start items-start w-full h-fit">
-            <p className="text-sm text-white text-shadow-[2px_2px_0.5px_rgba(0,0,0,0.5)] whitespace-pre-wrap">
+          <div className="flex h-fit w-full items-start justify-start">
+            <p className="text-sm whitespace-pre-wrap text-white text-shadow-[2px_2px_0.5px_rgba(0,0,0,0.5)]">
               {project.description}
             </p>
           </div>
@@ -27,7 +27,7 @@ function ProjectCard(project: ProjectCard) {
         <div
           className={`${
             project.links.length < 3 ? "justify-center" : "justify-between"
-          } flex flex-col items-center w-fit h-full gap-2 p-2 bg-violet-950 text-sky-300`}
+          } flex h-full w-fit flex-col items-center gap-2 bg-violet-950 p-2 text-sky-300`}
         >
           {project.links.map((link, idx) => {
             const Icon = defaultIconMap[link.type];
@@ -44,7 +44,7 @@ function ProjectCard(project: ProjectCard) {
           })}
         </div>
       </div>
-      <div className="flex justify-start items-start w-full h-fit gap-2">
+      <div className="flex h-fit w-full items-start justify-start gap-2">
         {project.stack.map((tech, idx) => {
           return <TechIcon key={idx} icon={tech.icon} name={tech.name} />;
         })}

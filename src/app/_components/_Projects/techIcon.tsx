@@ -11,13 +11,13 @@ function TechIcon(tech: ProjectStack) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <div className="flex flex-col justify-center items-center w-6 h-6 p-0.5 bg-violet-950">
+        <div className="flex h-6 w-6 flex-col items-center justify-center bg-violet-950 p-0.5">
           <Image
             src={tech.icon}
             alt={tech.name}
             width={20}
             height={20}
-            className="w-full h-full"
+            className="h-full w-full"
           />
         </div>
       </TooltipTrigger>
