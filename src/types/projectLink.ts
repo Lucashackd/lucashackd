@@ -21,4 +21,20 @@ export const RealStateLinks: ProjectLink[] = [
   },
 ];
 
+export const LawFirmLinks: ProjectLink[] = [
+  {
+    type: "website",
+    url: new URL("https://leitzke-landing-new.vercel.app/"),
+  },
+];
+
+export const RealStatePortfolioLinks: ProjectLink[] = [
+  {
+    type: "github",
+    url: new URL(
+      "https://github.com/Lucashackd/Imobiliaria-Sistema-de-Imoveis.git",
+    ),
+  },
+];
+
 export default ProjectLink;
