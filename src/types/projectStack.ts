@@ -59,7 +59,7 @@ export const RealStateStack: ProjectStack[] = [
 
 export const LawFirmStack: ProjectStack[] = [
   {
-    icon: "/images/JavaScript.svg",
+    icon: "/images/Javascript.svg",
     name: "JavaScript",
   },
   {
@@ -82,7 +82,7 @@ export const LawFirmStack: ProjectStack[] = [
 
 export const RealStatePortfolioStack: ProjectStack[] = [
   {
-    icon: "/images/JavaScript.svg",
+    icon: "/images/Javascript.svg",
     name: "JavaScript",
   },
   {
