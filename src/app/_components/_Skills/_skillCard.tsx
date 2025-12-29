@@ -8,7 +8,7 @@ function SkillCard(card: SkillCard) {
       <CardHeader>
         <CardTitle className="card">{card.title}</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-4 h-full">
+      <CardContent className="flex h-full flex-col gap-4">
         <Item skill={card.skillList} />
       </CardContent>
     </Card>
