@@ -57,4 +57,47 @@ export const RealStateStack: ProjectStack[] = [
   },
 ];
 
+export const LawFirmStack: ProjectStack[] = [
+  {
+    icon: "/images/JavaScript.svg",
+    name: "JavaScript",
+  },
+  {
+    icon: "/images/TypeScript.svg",
+    name: "TypeScript",
+  },
+  {
+    icon: "/images/React.svg",
+    name: "React",
+  },
+  {
+    icon: "/images/nextjs.png",
+    name: "Next.js",
+  },
+  {
+    icon: "/images/TailwindCss.svg",
+    name: "Tailwind CSS",
+  },
+];
+
+export const RealStatePortfolioStack: ProjectStack[] = [
+  {
+    icon: "/images/JavaScript.svg",
+    name: "JavaScript",
+  },
+  {
+    icon: "/images/React.svg",
+    name: "React",
+  },
+  {
+    icon: "/images/TailwindCss.svg",
+    name: "Tailwind CSS",
+  },
+  { icon: "/images/Firebase.svg", name: "Firebase" },
+  {
+    icon: "/images/Git.svg",
+    name: "Git",
+  },
+];
+
 export default ProjectStack;
