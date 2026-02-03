@@ -22,21 +22,21 @@ function Contact() {
           <div className="flex h-full w-full items-center justify-center gap-6 sm:justify-between">
             <a
               href="mailto:lucashackd@gmail.com?subject=Contact from portfolio"
-              className="flex flex-col items-center gap-1 text-violet-950"
+              className="flex flex-col items-center gap-1 text-violet-950 transition-all duration-300 hover:text-violet-900"
             >
               <RiMailFill size={80} className="w-10 md:w-20" />
               <span className="hidden font-semibold sm:block">Email</span>
             </a>
             <a
               href="https://wa.me/+5553981618825"
-              className="flex flex-col items-center gap-1 text-violet-950"
+              className="flex flex-col items-center gap-1 text-violet-950 transition-all duration-300 hover:text-violet-900"
             >
               <PiWhatsappLogoFill size={80} className="w-10 md:w-20" />
               <span className="hidden font-semibold sm:block">WhatsApp</span>
             </a>
             <a
               href="https://www.linkedin.com/in/lucashackd/"
-              className="flex flex-col items-center gap-1 text-violet-950"
+              className="flex flex-col items-center gap-1 text-violet-950 transition-all duration-300 hover:text-violet-900"
             >
               <PiLinkedinLogoFill size={80} className="w-10 md:w-20" />
               <span className="hidden font-semibold sm:block">LinkedIn</span>

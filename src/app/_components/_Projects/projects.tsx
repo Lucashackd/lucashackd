@@ -50,7 +50,7 @@ function Projects() {
           href="https://github.com/lucashackd"
           target="_blank"
           rel="noreferrer"
-          className="flex h-fit w-fit items-center justify-center gap-2.5 rounded-sm border-[1px] border-violet-950 bg-sky-300 px-4 py-2 text-xl font-medium text-violet-950"
+          className="flex h-fit w-fit items-center justify-center gap-2.5 rounded-sm border-[1px] border-violet-950 bg-sky-300 px-4 py-2 text-xl font-medium text-violet-950 transition-colors duration-400 hover:border-violet-900 hover:bg-sky-200 hover:text-violet-900"
         >
           <span>More on GitHub</span>
           <ArrowRight />

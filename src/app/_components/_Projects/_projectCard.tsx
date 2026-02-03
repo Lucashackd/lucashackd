@@ -27,7 +27,7 @@ function ProjectCard(project: ProjectCard) {
         <div
           className={`${
             project.links.length < 3 ? "justify-center" : "justify-between"
-          } flex h-full w-fit flex-col items-center gap-2 bg-violet-950 p-2 text-sky-300`}
+          } flex h-full w-fit flex-col items-center bg-violet-950 text-sky-300`}
         >
           {project.links.map((link, idx) => {
             const Icon = defaultIconMap[link.type];
@@ -37,8 +37,9 @@ function ProjectCard(project: ProjectCard) {
                 href={String(link.url)}
                 target="_blank"
                 rel="noreferrer"
+                className="flex h-full w-full items-center justify-center p-5 text-xl transition-colors duration-400 hover:bg-violet-800 hover:text-2xl hover:text-amber-200"
               >
-                <Icon size={20} />
+                <Icon className="absolute" />
               </a>
             );
           })}
