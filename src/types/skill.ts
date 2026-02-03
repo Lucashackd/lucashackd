@@ -8,7 +8,7 @@ export const Languages: Skill[] = [
   {
     icon: "/images/Java.svg",
     name: "Java",
-    level: 80,
+    level: 95,
   },
   {
     icon: "/images/Javascript.svg",
@@ -23,11 +23,16 @@ export const Languages: Skill[] = [
   {
     icon: "/images/TypeScript.svg",
     name: "Typescript",
-    level: 75,
+    level: 80,
   },
 ];
 
 export const Frameworks: Skill[] = [
+  {
+    icon: "/images/jakarta-ee.png",
+    name: "Jakarta EE",
+    level: 85,
+  },
   {
     icon: "/images/Laravel.svg",
     name: "Laravel",
@@ -36,27 +41,27 @@ export const Frameworks: Skill[] = [
   {
     icon: "/images/nextjs.png",
     name: "Next.js",
-    level: 85,
+    level: 90,
   },
   {
     icon: "/images/NodeJs.svg",
     name: "Node.js",
-    level: 90,
+    level: 85,
   },
   {
     icon: "/images/React.svg",
     name: "React",
-    level: 95,
+    level: 90,
   },
   {
     icon: "/images/React.svg",
     name: "React Native",
-    level: 90,
+    level: 80,
   },
   {
     icon: "/images/SpringBoot.svg",
     name: "Spring Boot",
-    level: 75,
+    level: 80,
   },
   {
     icon: "/images/TailwindCss.svg",
@@ -69,12 +74,12 @@ export const Databases: Skill[] = [
   {
     icon: "/images/Firebase.svg",
     name: "Firebase",
-    level: 90,
+    level: 75,
   },
   {
     icon: "/images/MongoDb.svg",
     name: "MongoDB",
-    level: 75,
+    level: 70,
   },
   {
     icon: "/images/MySQL.svg",
@@ -97,7 +102,7 @@ export const Tools: Skill[] = [
   {
     icon: "/images/AmazonS3.svg",
     name: "AWS S3",
-    level: 85,
+    level: 65,
   },
   {
     icon: "/images/Launch.svg",
@@ -107,7 +112,7 @@ export const Tools: Skill[] = [
   {
     icon: "/images/Docker.svg",
     name: "Docker",
-    level: 60,
+    level: 75,
   },
   {
     icon: "/images/Figma.svg",

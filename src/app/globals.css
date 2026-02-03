@@ -122,7 +122,9 @@
     background-image: url(/images/bg-frame.svg), url(/images/bg-frame.svg);
     background-size: 125px;
     background-repeat: repeat;
-    background-position: 0 0, 62.5px 31.25px;
+    background-position:
+      0 0,
+      62.5px 31.25px;
   }
 
   button:hover {
@@ -138,7 +140,8 @@
 
   .glass-effect {
     background-color: rgba(76, 29, 149, 0.75);
-    box-shadow: inset -1px -1px 4px rgba(94, 94, 94, 0.5),
+    box-shadow:
+      inset -1px -1px 4px rgba(94, 94, 94, 0.5),
       inset 1px 1px 4px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
   }
@@ -154,7 +157,7 @@
     bottom: -2px;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, #7dd3fc, #fda4af);
+    background: linear-gradient(to right, #d9f99d, #fda4af);
     transition: width 0.3s ease;
   }
 
@@ -170,7 +173,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(to bottom right, #7dd3fc, #fda4af);
+    background: linear-gradient(to bottom right, #d9f99d, #fda4af);
     background-clip: text;
     text-decoration: transparent;
     -webkit-background-clip: text;
