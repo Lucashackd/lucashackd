@@ -79,7 +79,8 @@ function Navigation() {
               </li>
             </ul>
           </nav>
-          <SheetFooter>
+          {/* TODO: Adicionar o arquivo de download do currículo para mobile */}
+          {/* <SheetFooter>
             <Link
               href={"#curriculum"}
               className="flex items-center gap-2 font-medium text-rose-300"
@@ -89,7 +90,7 @@ function Navigation() {
                 Curriculum
               </Button>
             </Link>
-          </SheetFooter>
+          </SheetFooter> */}
         </SheetContent>
       </Sheet>
 
@@ -132,7 +133,7 @@ function Navigation() {
             </Link>
           </li>
 
-          {/* TODO: Adicionar o botão de download do currículo */}
+          {/* TODO: Adicionar o arquivo de download do currículo para desktop */}
           {/* <li>
             <Link href={"#curriculum"}>
               <Button className="bg-gradient-to-br from-sky-300 to-rose-300 font-semibold text-violet-900 transition-colors duration-800 ease-in-out hover:from-rose-300 hover:to-sky-300">
