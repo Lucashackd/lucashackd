@@ -132,14 +132,15 @@ function Navigation() {
             </Link>
           </li>
 
-          <li>
+          {/* TODO: Adicionar o botão de download do currículo */}
+          {/* <li>
             <Link href={"#curriculum"}>
               <Button className="bg-gradient-to-br from-sky-300 to-rose-300 font-semibold text-violet-900 transition-colors duration-800 ease-in-out hover:from-rose-300 hover:to-sky-300">
                 <HiOutlineDownload />
                 Curriculum
               </Button>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </>
