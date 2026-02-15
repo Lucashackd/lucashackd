@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,12 +14,31 @@ import {
 import { HiOutlineDownload, HiOutlineMenu } from "react-icons/hi";
 import Link from "next/link";
 import { AtSign, Download, FolderGit2, Star, User, X } from "lucide-react";
+import { useState } from "react";
 
 function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSheetVisibility = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    event.preventDefault(); // Evita o comportamento padrão do link (Next.js faz voltar para o topo da página)
+    setIsOpen(false); // Fecha o Sheet
+
+    // Navega para a seção desejada depois de fechar o Sheet
+    setTimeout(() => {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
+
   return (
     <>
       {/* Navegação Mobile */}
-      <Sheet>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button
             variant={"secondary"}
@@ -43,6 +64,9 @@ function Navigation() {
               <li className="rounded-md border-b-2 border-amber-200 bg-violet-950 p-2">
                 <Link
                   href={"#about"}
+                  onClick={(event) => {
+                    handleSheetVisibility(event, "#about");
+                  }}
                   className="flex items-center gap-2 font-medium text-amber-200"
                 >
                   <User />
@@ -53,6 +77,9 @@ function Navigation() {
               <li className="rounded-md border-b-2 border-lime-200 bg-violet-950 p-2">
                 <Link
                   href={"#skills"}
+                  onClick={(event) => {
+                    handleSheetVisibility(event, "#skills");
+                  }}
                   className="flex items-center gap-2 font-medium text-lime-200"
                 >
                   <Star />
@@ -63,6 +90,9 @@ function Navigation() {
               <li className="rounded-md border-b-2 border-sky-300 bg-violet-950 p-2">
                 <Link
                   href={"#projects"}
+                  onClick={(event) => {
+                    handleSheetVisibility(event, "#projects");
+                  }}
                   className="flex items-center gap-2 font-medium text-sky-300"
                 >
                   <FolderGit2 /> Projects
@@ -72,6 +102,9 @@ function Navigation() {
               <li className="rounded-md border-b-2 border-rose-300 bg-violet-950 p-2">
                 <Link
                   href={"#contact"}
+                  onClick={(event) => {
+                    handleSheetVisibility(event, "#contact");
+                  }}
                   className="flex items-center gap-2 font-medium text-rose-300"
                 >
                   <AtSign /> Contact
