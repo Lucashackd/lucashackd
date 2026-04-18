@@ -1,22 +1,24 @@
 import { Heart } from "lucide-react";
-import { Kode_Mono } from "next/font/google";
-
-const kodeMono = Kode_Mono({ subsets: ["latin"] });
 
 function Footer() {
   return (
-    <div className="relative z-10 flex w-full items-center justify-center bg-violet-900 p-6 shadow-[0_-4px_10px_rgba(0,0,0,0.6)]">
-      <p className="text-sm sm:text-lg xl:text-2xl text-amber-200 text-center">
-        Made with <Heart fill="#2E1065" className="inline-block text-rose-300 size-[0.875rem] sm:size-[1.125rem]" />{" "}
-        <span className={`${kodeMono.className} text-sky-300`}>
-          (and Next.js)
-        </span>{" "}
-        by{" "}
-        <span className="font-extrabold text-lime-200">
-          Lucas Hackbart Döhnert.
-        </span>
-      </p>
-    </div>
+    <footer className="border-t border-white/[0.07] bg-[#0a0a0f]">
+      <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6">
+        <p className="font-mono text-xs text-[#7a7a90]">
+          © 2025 Lucas Hackbart Döhnert
+        </p>
+        <p className="font-mono text-xs text-[#7a7a90]">
+          made with{" "}
+          <Heart
+            size={10}
+            className="inline-block text-[#7c6fff]"
+            fill="#7c6fff"
+          />{" "}
+          and{" "}
+          <span className="text-[#00e5a0]">Next.js</span>
+        </p>
+      </div>
+    </footer>
   );
 }
 

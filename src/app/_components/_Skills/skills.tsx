@@ -3,15 +3,38 @@ import SkillCard from "./_skillCard";
 
 function Skills() {
   return (
-    <div id="skills" className="container m-auto h-fit gap-2 p-4">
-      <h2 className="text-gradient">Skills</h2>
-      <div className="grid h-fit grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <section id="skills" className="container mx-auto px-4 py-16 sm:px-6">
+
+      {/* Header da seção */}
+      <div className="mb-8 flex items-center gap-3">
+        <span className="rounded bg-[#00e5a0]/08 border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+          02 / skills
+        </span>
+        <h2 className="text-xl font-semibold text-[#f0f0f5] mb-0">
+          Stack técnica
+        </h2>
+      </div>
+
+      {/* Grid: 1 col mobile → 2 col tablet → 4 col desktop */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <SkillCard title="Programming Languages" skillList={Languages} />
         <SkillCard title="Frameworks & Libraries" skillList={Frameworks} />
         <SkillCard title="Databases" skillList={Databases} />
         <SkillCard title="And more..." skillList={Tools} />
       </div>
-    </div>
+
+      {/* Legenda */}
+      <div className="mt-5 flex items-center gap-5">
+        <div className="flex items-center gap-2">
+          <span className="inline-block h-2 w-2 rounded-sm bg-[#00e5a0]" />
+          <span className="font-mono text-[10px] text-[#7a7a90]">primário</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="inline-block h-2 w-2 rounded-sm bg-[#7c6fff]" />
+          <span className="font-mono text-[10px] text-[#7a7a90]">secundário</span>
+        </div>
+      </div>
+    </section>
   );
 }
 

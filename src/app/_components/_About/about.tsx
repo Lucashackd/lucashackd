@@ -1,44 +1,111 @@
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
 import Image from "next/image";
 
 function About() {
   return (
-    <div id="about" className="container m-auto p-4">
-      <h2 className="text-gradient">About Me</h2>
-      <div className="flex flex-col items-center justify-between gap-6 lg:h-73 lg:flex-row lg:items-stretch xl:h-69">
-        <Card className="aspect-square overflow-clip py-0">
-          <CardContent className="h-fit w-fit px-0">
-            <Image
-              src={"/images/profile.webp"}
-              alt="Profile Picture"
-              width={640}
-              height={640}
-              className="h-auto w-40 object-contain md:w-56 lg:h-auto lg:w-auto"
-              sizes="(max-width: 640px) 16rem, (max-width: 768px) 18rem, (max-width: 1024px) 20rem, 24rem"
-            />
-          </CardContent>
-        </Card>
-        <Card className="flex-1 justify-center">
-          <CardContent>
-            <p className="text-justify text-base text-white text-shadow-[2px_2px_0.5px_rgba(0,0,0,0.5)] xl:text-lg">
-              Full Stack developer with a strong academic foundation and
-              hands-on experience in web and mobile technologies. Passionate
-              about building complete and scalable solutions, from UI to
-              server-side logic, always combining clean code with user-centered
-              design. Graduated in Systems for Internet at the Federal Institute
-              of Science, Technology and Education, with practical experience in
-              HTML, CSS, JavaScript, React, Node.js, Laravel, and more. Skilled
-              in working with both relational and NoSQL databases (MySQL,
-              PostgreSQL, MongoDB, Firebase). Previous roles include IT intern
-              at Companhia de Informática de Pelotas and Front-End development
-              teaching assistant at IFSul. Also experienced in DevOps practices,
-              agile methodologies, cloud services (AWS, Cloud Storage), and
-              prototyping tools like Figma and QuantUX.
-            </p>
-          </CardContent>
-        </Card>
+    <section
+      id="about"
+      className="container mx-auto px-4 py-16 sm:px-6 sm:py-20"
+    >
+      {/* Badge "available for work" */}
+      <div className="mb-8 flex justify-center sm:justify-start">
+        <span className="bg-[#00e5a0]/08 inline-flex items-center gap-2 rounded-full border border-[#00e5a0]/20 px-3 py-1 font-mono text-xs text-[#00e5a0]">
+          <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-[#00e5a0]" />
+          available for work
+        </span>
       </div>
-    </div>
+
+      {/* Hero grid — mobile: coluna única / lg: 2 colunas */}
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        {/* Texto */}
+        <div className="order-2 flex flex-col gap-5 lg:order-1">
+          <div>
+            <h1 className="text-4xl leading-tight font-bold text-[#f0f0f5] sm:text-5xl lg:text-6xl">
+              Lucas <span className="text-[#00e5a0]">Hackbart</span>
+            </h1>
+            <p className="mt-2 font-mono text-sm text-[#7c6fff] sm:text-base">
+              $ full_stack_developer --mode=passionate
+            </p>
+          </div>
+
+          <p className="text-sm leading-relaxed text-[#7a7a90] sm:text-base lg:max-w-lg">
+            Full Stack developer com base acadêmica sólida e experiência prática
+            em web e mobile. Apaixonado por construir soluções completas e
+            escaláveis, do UI ao server-side, sempre unindo clean code com
+            design centrado no usuário. Formado em Sistemas para Internet no
+            IFSUL. Experiência com MySQL, PostgreSQL, MongoDB, Firebase, AWS,
+            Docker e Figma.
+          </p>
+
+          {/* Botões */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#projects")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="rounded-md bg-[#00e5a0] px-5 py-2.5 text-sm font-bold text-[#0a0a0f] transition-opacity duration-200 hover:opacity-90"
+            >
+              Ver projetos
+            </a>
+            {/* TODO: adicionar link do currículo */}
+            <a
+              href="#"
+              className="rounded-md border border-white/[0.07] px-5 py-2.5 text-sm text-[#f0f0f5] transition-colors duration-200 hover:border-[#00e5a0]/40 hover:text-[#00e5a0]"
+            >
+              Download CV
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div className="flex gap-8 border-t border-white/[0.07] pt-5">
+            <div>
+              <p className="font-mono text-2xl font-bold text-[#00e5a0]">4+</p>
+              <p className="text-xs tracking-widest text-[#7a7a90] uppercase">
+                anos exp.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-2xl font-bold text-[#00e5a0]">10+</p>
+              <p className="text-xs tracking-widest text-[#7a7a90] uppercase">
+                tecnologias
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-2xl font-bold text-[#00e5a0]">15+</p>
+              <p className="text-xs tracking-widest text-[#7a7a90] uppercase">
+                projetos
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Foto */}
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+          <div className="relative">
+            {/* Cantos decorativos */}
+            <span className="photo-corner photo-corner-tl" />
+            <span className="photo-corner photo-corner-br" />
+
+            <div className="overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24]">
+              <Image
+                src="/images/profile.webp"
+                alt="Lucas Hackbart Döhnert"
+                width={640}
+                height={640}
+                className="h-auto w-48 object-cover grayscale-[15%] sm:w-64 lg:w-72"
+                sizes="(max-width: 640px) 12rem, (max-width: 1024px) 16rem, 18rem"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

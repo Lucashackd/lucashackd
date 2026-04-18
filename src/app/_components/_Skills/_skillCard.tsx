@@ -1,17 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Item from "./item";
 import type SkillCard from "@/types/skillCard";
 
 function SkillCard(card: SkillCard) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="card">{card.title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex h-full flex-col gap-4">
+    <div className="rounded-xl border border-white/[0.07] bg-[#111118] p-4">
+      <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.15em] text-[#7a7a90]">
+        {card.title}
+      </p>
+      <div className="flex flex-col gap-3">
         <Item skill={card.skillList} />
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
 

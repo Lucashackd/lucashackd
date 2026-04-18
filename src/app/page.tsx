@@ -7,32 +7,17 @@ import Skills from "./_components/_Skills/skills";
 
 export default function Home() {
   return (
-    <div>
-      <header>
-        <Header />
-      </header>
+    <div className="flex min-h-screen flex-col">
+      <Header />
 
-      <main className="flex flex-col space-y-10">
-        <section>
-          <About />
-        </section>
-
-        <section>
-          <Skills />
-        </section>
-
-        <section>
-          <Projects />
-        </section>
-
-        <section>
-          <Contact />
-        </section>
+      <main className="flex flex-1 flex-col">
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

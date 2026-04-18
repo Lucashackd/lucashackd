@@ -41,6 +41,16 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Design tokens do redesign */
+  --tech-bg: #0a0a0f;
+  --tech-surface: #111118;
+  --tech-surface2: #1a1a24;
+  --tech-accent: #00e5a0;
+  --tech-accent2: #7c6fff;
+  --tech-text: #f0f0f5;
+  --tech-muted: #7a7a90;
+  --tech-border: rgba(255, 255, 255, 0.07);
 }
 
 :root {
@@ -78,91 +88,18 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
-.dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.552 0.016 285.938);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
-    background-color: #7b26f2;
-    background-image: url(/images/bg-frame.svg), url(/images/bg-frame.svg);
-    background-size: 125px;
-    background-repeat: repeat;
-    background-position:
-      0 0,
-      62.5px 31.25px;
+    background-color: #0a0a0f;
+    color: #f0f0f5;
   }
 
   button:hover {
     cursor: pointer;
-  }
-
-  .card {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #fefefe;
-    text-transform: uppercase;
-  }
-
-  .glass-effect {
-    background-color: rgba(76, 29, 149, 0.75);
-    box-shadow:
-      inset -1px -1px 4px rgba(94, 94, 94, 0.5),
-      inset 1px 1px 4px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-  }
-
-  .gradient-border-bottom {
-    position: relative;
-  }
-
-  .gradient-border-bottom::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(to right, #d9f99d, #fda4af);
-    transition: width 0.3s ease;
-  }
-
-  .gradient-border-bottom:hover::after {
-    width: 100%;
   }
 
   h2 {
@@ -170,15 +107,106 @@
     font-weight: bold;
     justify-self: center;
     margin-bottom: 0.5rem;
+    color: #f0f0f5;
   }
 
-  .text-gradient {
-    background: linear-gradient(to bottom right, #d9f99d, #fda4af);
-    background-clip: text;
-    text-decoration: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  /* Accent pulsante para badge "available for work" */
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  /* Linha de accent que aparece no hover dos cards */
+  .card-accent-top {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-accent-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #00e5a0;
+    border-radius: 4px 4px 0 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .card-accent-top:hover::before {
+    opacity: 1;
+  }
+
+  /* Cantos decorativos da foto */
+  .photo-corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: #00e5a0;
+    border-style: solid;
+    opacity: 0.6;
+  }
+
+  .photo-corner-tl {
+    top: 8px;
+    left: 8px;
+    border-width: 2px 0 0 2px;
+  }
+
+  .photo-corner-br {
+    bottom: 8px;
+    right: 8px;
+    border-width: 0 2px 2px 0;
+  }
+
+  /* Hover nos links de nav */
+  .nav-link {
+    position: relative;
+    color: #7a7a90;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #00e5a0;
+    transition: width 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #00e5a0;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Segmentos de skill */
+  .skill-seg {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+
+  .skill-seg-filled-green {
+    background-color: #00e5a0;
+  }
+
+  .skill-seg-filled-purple {
+    background-color: #7c6fff;
+  }
+
+  .skill-seg-empty {
+    background-color: rgba(255, 255, 255, 0.06);
   }
 }
