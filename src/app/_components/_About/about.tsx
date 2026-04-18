@@ -22,7 +22,7 @@ function About() {
         <div className="order-2 flex flex-col gap-5 lg:order-1">
           <div>
             <h1 className="text-4xl leading-tight font-bold text-[#f0f0f5] sm:text-5xl lg:text-6xl">
-              Lucas <span className="text-[#00e5a0]">Hackbart</span>
+              Lucas <span className="text-[#00e5a0]">Döhnert</span>
             </h1>
             <p className="mt-2 font-mono text-sm text-[#7c6fff] sm:text-base">
               $ full_stack_developer --mode=passionate
@@ -30,12 +30,14 @@ function About() {
           </div>
 
           <p className="text-sm leading-relaxed text-[#7a7a90] sm:text-base lg:max-w-lg">
-            Full Stack developer com base acadêmica sólida e experiência prática
-            em web e mobile. Apaixonado por construir soluções completas e
-            escaláveis, do UI ao server-side, sempre unindo clean code com
-            design centrado no usuário. Formado em Sistemas para Internet no
-            IFSUL. Experiência com MySQL, PostgreSQL, MongoDB, Firebase, AWS,
-            Docker e Figma.
+            Desenvolvedor Full Stack graduado em Sistemas para Internet (IFSUL)
+            focado em construir soluções escaláveis e arquiteturas eficientes.
+            Especialista no ecossistema Java, PHP e frameworks modernos de
+            JavaScript (Angular, React, Next.js), com experiência comprovada em
+            refatorações complexas e ciclo de vida completo de produtos. Utilizo
+            ferramentas de IA de ponta para otimizar o desenvolvimento e
+            garantir entregas de alta performance. Proficiente em inglês (C1) e
+            apaixonado por unir design centrado no usuário com código limpo.
           </p>
 
           {/* Botões */}
