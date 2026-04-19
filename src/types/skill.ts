@@ -6,19 +6,29 @@ interface Skill {
 
 export const Languages: Skill[] = [
   {
+    icon: "/images/C.svg",
+    name: "C",
+    level: 50,
+  },
+  {
     icon: "/images/Java.svg",
     name: "Java",
-    level: 95,
+    level: 85,
   },
   {
     icon: "/images/Javascript.svg",
     name: "JavaScript",
-    level: 95,
+    level: 85,
   },
   {
     icon: "/images/Php.svg",
     name: "PHP",
-    level: 95,
+    level: 75,
+  },
+  {
+    icon: "/images/Python.svg",
+    name: "Python",
+    level: 45,
   },
   {
     icon: "/images/TypeScript.svg",
@@ -29,44 +39,39 @@ export const Languages: Skill[] = [
 
 export const Frameworks: Skill[] = [
   {
+    icon: "/images/angular-icon.svg",
+    name: "Angular",
+    level: 80,
+  },
+  {
     icon: "/images/jakarta-ee.png",
     name: "Jakarta EE",
-    level: 85,
+    level: 80,
   },
   {
     icon: "/images/Laravel.svg",
     name: "Laravel",
-    level: 95,
-  },
-  {
-    icon: "/images/nextjs.png",
-    name: "Next.js",
-    level: 90,
+    level: 80,
   },
   {
     icon: "/images/NodeJs.svg",
     name: "Node.js",
-    level: 85,
+    level: 70,
   },
   {
     icon: "/images/React.svg",
     name: "React",
-    level: 90,
+    level: 80,
   },
   {
     icon: "/images/React.svg",
     name: "React Native",
-    level: 80,
+    level: 70,
   },
   {
     icon: "/images/SpringBoot.svg",
     name: "Spring Boot",
-    level: 80,
-  },
-  {
-    icon: "/images/TailwindCss.svg",
-    name: "Tailwind CSS",
-    level: 95,
+    level: 75,
   },
 ];
 
@@ -74,75 +79,75 @@ export const Databases: Skill[] = [
   {
     icon: "/images/Firebase.svg",
     name: "Firebase",
-    level: 75,
+    level: 70,
   },
   {
     icon: "/images/MongoDb.svg",
     name: "MongoDB",
-    level: 70,
+    level: 65,
   },
   {
     icon: "/images/MySQL.svg",
     name: "MySQL",
-    level: 95,
+    level: 90,
   },
   {
     icon: "/images/PostgreSQL.svg",
     name: "PostgreSQL",
-    level: 95,
+    level: 90,
   },
 ];
 
 export const Tools: Skill[] = [
   {
     icon: "/images/API.svg",
-    name: "API",
-    level: 95,
+    name: "APIs REST",
+    level: 85,
   },
   {
     icon: "/images/AmazonS3.svg",
     name: "AWS S3",
-    level: 65,
+    level: 70,
   },
   {
     icon: "/images/Launch.svg",
     name: "Deploy",
-    level: 80,
+    level: 75,
   },
   {
     icon: "/images/Docker.svg",
     name: "Docker",
-    level: 75,
+    level: 70,
   },
   {
     icon: "/images/Figma.svg",
     name: "Figma",
-    level: 90,
+    level: 65,
   },
   {
     icon: "/images/Git.svg",
     name: "Git",
-    level: 95,
+    level: 90,
   },
   {
     icon: "/images/GitHub.svg",
     name: "GitHub",
-    level: 95,
+    level: 85,
   },
   {
     icon: "/images/Kanban.svg",
     name: "Kanban",
-    level: 90,
+    level: 75,
   },
   {
     icon: "/images/Scrum.svg",
     name: "Scrum",
-    level: 80,
+    level: 75,
   },
   {
     icon: "/images/uxui.svg",
     name: "UX/UI",
-    level: 90,
+    level: 65,
   },
 ];
 

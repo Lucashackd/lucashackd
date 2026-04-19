@@ -4,13 +4,12 @@ import SkillCard from "./_skillCard";
 function Skills() {
   return (
     <section id="skills" className="container mx-auto px-4 py-16 sm:px-6">
-
       {/* Header da seção */}
       <div className="mb-8 flex items-center gap-3">
-        <span className="rounded bg-[#00e5a0]/08 border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+        <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
           02 / skills
         </span>
-        <h2 className="text-xl font-semibold text-[#f0f0f5] mb-0">
+        <h2 className="mb-0 text-xl font-semibold text-[#f0f0f5]">
           Stack técnica
         </h2>
       </div>
@@ -31,7 +30,9 @@ function Skills() {
         </div>
         <div className="flex items-center gap-2">
           <span className="inline-block h-2 w-2 rounded-sm bg-[#7c6fff]" />
-          <span className="font-mono text-[10px] text-[#7a7a90]">secundário</span>
+          <span className="font-mono text-[10px] text-[#7a7a90]">
+            secundário
+          </span>
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ function levelToSegments(level: number): number {
  * as demais usam roxo (secundárias/em aprendizado).
  */
 function segmentColor(level: number): "green" | "purple" {
-  return level >= 61 ? "green" : "purple";
+  return level >= 80 ? "green" : "purple";
 }
 
 function Item({ skill }: { skill: Skill[] }) {
@@ -25,12 +25,9 @@ function Item({ skill }: { skill: Skill[] }) {
         const color = segmentColor(s.level);
 
         return (
-          <div
-            key={s.name}
-            className="flex items-center justify-between gap-2"
-          >
+          <div key={s.name} className="flex items-center justify-between gap-2">
             {/* Nome + ícone */}
-            <div className="flex items-center gap-2 min-w-0">
+            <div className="flex min-w-0 items-center gap-2">
               <span
                 className={`inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
                   color === "green" ? "bg-[#00e5a0]" : "bg-[#7c6fff]"
@@ -49,7 +46,7 @@ function Item({ skill }: { skill: Skill[] }) {
             </div>
 
             {/* Segmentos de nível */}
-            <div className="flex shrink-0 gap-[3px]">
+            <div className="flex shrink-0 gap-0.75">
               {Array.from({ length: 5 }).map((_, i) => (
                 <span
                   key={i}
