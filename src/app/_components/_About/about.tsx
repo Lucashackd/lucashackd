@@ -99,7 +99,7 @@ function About() {
                 alt="Lucas Hackbart Döhnert"
                 width={640}
                 height={640}
-                className="h-auto w-48 object-cover grayscale-[15%] sm:w-64 lg:w-72"
+                className="h-auto w-48 object-cover grayscale-15 sm:w-64 lg:w-72"
                 sizes="(max-width: 640px) 12rem, (max-width: 1024px) 16rem, 18rem"
                 priority
               />
