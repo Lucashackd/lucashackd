@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
 
-          <div className="space-y-6 text-sm leading-relaxed text-[#A2A2BF] sm:text-base">
+          <div className="space-y-6 text-justify text-sm leading-relaxed text-[#A2A2BF] sm:text-base">
             <p>
               Olá, sou o Lucas! Como Tecnólogo em Sistemas para Internet e
               Desenvolvedor Full-Stack, meu foco principal é a arquitetura e a
