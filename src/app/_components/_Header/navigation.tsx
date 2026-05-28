@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { X, Menu, User, Star, FolderGit2, AtSign } from "lucide-react";
+import { X, User, Star, FolderGit2, AtSign } from "lucide-react";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const navItems = [
   { href: "#about", label: "About", icon: User },
@@ -14,7 +20,10 @@ const navItems = [
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNav = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNav = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    href: string,
+  ) => {
     event.preventDefault();
     setIsOpen(false);
     setTimeout(() => {
@@ -30,7 +39,10 @@ function Navigation() {
         <ul className="flex items-center gap-6">
           {navItems.map(({ href, label }) => (
             <li key={href}>
-              <Link href={href} className="nav-link text-sm tracking-widest uppercase font-mono">
+              <Link
+                href={href}
+                className="nav-link font-mono text-sm tracking-widest uppercase"
+              >
                 {label}
               </Link>
             </li>
@@ -39,64 +51,47 @@ function Navigation() {
       </nav>
 
       {/* Mobile — botão hambúrguer */}
-      <button
-        className="flex md:hidden flex-col gap-[5px] p-1"
-        onClick={() => setIsOpen(true)}
-        aria-label="Abrir menu"
-      >
-        <span className="block w-5 h-[1.5px] bg-[#7a7a90]" />
-        <span className="block w-5 h-[1.5px] bg-[#7a7a90]" />
-        <span className="block w-5 h-[1.5px] bg-[#7a7a90]" />
-      </button>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild>
+          <button
+            className="flex flex-col gap-[5px] p-1 md:hidden"
+            aria-label="Abrir menu"
+          >
+            <span className="block h-[1.5px] w-5 bg-[#7a7a90]" />
+            <span className="block h-[1.5px] w-5 bg-[#7a7a90]" />
+            <span className="block h-[1.5px] w-5 bg-[#7a7a90]" />
+          </button>
+        </SheetTrigger>
 
-      {/* Mobile — drawer */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex">
-          {/* overlay */}
-          <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
-          />
+        <SheetContent side="right">
+          <p className="mt-2 mb-8 font-mono text-xs tracking-widest text-[#7a7a90] uppercase">
+            // navegação
+          </p>
 
-          {/* painel */}
-          <div className="relative ml-auto flex h-full w-72 flex-col bg-[#111118] border-l border-white/[0.07] p-6">
-            <button
-              className="absolute top-4 right-4 text-[#7a7a90] hover:text-[#00e5a0] transition-colors"
-              onClick={() => setIsOpen(false)}
-              aria-label="Fechar menu"
-            >
-              <X size={20} />
-            </button>
+          <nav>
+            <ul className="flex flex-col gap-3">
+              {navItems.map(({ href, label, icon: Icon }) => (
+                <li key={href}>
+                  <button
+                    type="button"
+                    onClick={(e) => handleNav(e, href)}
+                    className="flex w-full items-center gap-3 rounded-lg border border-white/[0.07] bg-[#1a1a24] px-4 py-3 text-left text-sm text-[#f0f0f5] transition-all duration-200 hover:border-[#00e5a0]/30 hover:text-[#00e5a0]"
+                  >
+                    <Icon size={16} className="shrink-0" />
+                    <span className="font-mono tracking-wider">{label}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-            <p className="font-mono text-xs tracking-widest text-[#7a7a90] uppercase mb-8 mt-2">
-              // navegação
+          <div className="mt-auto border-t border-white/[0.07] pt-4">
+            <p className="font-mono text-[10px] text-[#7a7a90]">
+              lucashackd.dev
             </p>
-
-            <nav>
-              <ul className="flex flex-col gap-3">
-                {navItems.map(({ href, label, icon: Icon }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      onClick={(e) => handleNav(e, href)}
-                      className="flex items-center gap-3 rounded-lg border border-white/[0.07] bg-[#1a1a24] px-4 py-3 text-sm text-[#f0f0f5] transition-all duration-200 hover:border-[#00e5a0]/30 hover:text-[#00e5a0]"
-                    >
-                      <Icon size={16} className="shrink-0" />
-                      <span className="font-mono tracking-wider">{label}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <div className="mt-auto border-t border-white/[0.07] pt-4">
-              <p className="font-mono text-[10px] text-[#7a7a90]">
-                lucashackd.dev
-              </p>
-            </div>
           </div>
-        </div>
-      )}
+        </SheetContent>
+      </Sheet>
     </>
   );
 }
