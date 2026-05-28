@@ -32,7 +32,7 @@ function Contact() {
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Tag de seção */}
           <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
-            04 / contact
+            04 / contato
           </span>
 
           {/* Título */}

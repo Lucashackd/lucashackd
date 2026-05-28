@@ -11,10 +11,10 @@ import {
 } from "@/components/ui/sheet";
 
 const navItems = [
-  { href: "#about", label: "About", icon: User },
+  { href: "#about", label: "Sobre mim", icon: User },
   { href: "#skills", label: "Skills", icon: Star },
-  { href: "#projects", label: "Projects", icon: FolderGit2 },
-  { href: "#contact", label: "Contact", icon: AtSign },
+  { href: "#projects", label: "Projetos", icon: FolderGit2 },
+  { href: "#contact", label: "Contato", icon: AtSign },
 ];
 
 function Navigation() {

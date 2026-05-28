@@ -9,9 +9,6 @@ function Skills() {
         <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
           02 / skills
         </span>
-        <h2 className="mb-0 text-xl font-semibold text-[#f0f0f5]">
-          Stack técnica
-        </h2>
       </div>
 
       {/* Grid: 1 col mobile → 2 col tablet → 4 col desktop */}

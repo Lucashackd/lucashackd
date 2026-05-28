@@ -8,11 +8,10 @@ function About() {
       id="about"
       className="container mx-auto px-4 py-16 sm:px-6 sm:py-20"
     >
-      {/* Badge "available for work" */}
-      <div className="mb-8 flex justify-center sm:justify-start">
-        <span className="bg-[#00e5a0]/08 inline-flex items-center gap-2 rounded-full border border-[#00e5a0]/20 px-3 py-1 font-mono text-xs text-[#00e5a0]">
-          <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-[#00e5a0]" />
-          available for work
+      {/* Header da seção */}
+      <div className="mb-8 flex items-center gap-3">
+        <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+          01 / sobre mim
         </span>
       </div>
 

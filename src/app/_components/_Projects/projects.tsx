@@ -58,11 +58,8 @@ function Projects() {
       {/* Header da seção */}
       <div className="mb-8 flex items-center gap-3">
         <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
-          03 / projects
+          03 / projetos
         </span>
-        <h2 className="mb-0 text-xl font-semibold text-[#f0f0f5]">
-          Projetos em destaque
-        </h2>
       </div>
 
       {/* Grid: 1 col mobile → 2 col lg */}
@@ -91,7 +88,7 @@ function Projects() {
           rel="noreferrer"
           className="flex items-center gap-2 rounded-lg border border-white/[0.07] bg-[#111118] px-5 py-2.5 text-sm text-[#f0f0f5] transition-all duration-200 hover:border-[#00e5a0]/30 hover:text-[#00e5a0]"
         >
-          <span>More on GitHub</span>
+          <span>Mais no GitHub</span>
           <ArrowRight size={15} />
         </a>
       </div>
