@@ -49,7 +49,7 @@
   --tech-accent: #00e5a0;
   --tech-accent2: #7c6fff;
   --tech-text: #f0f0f5;
-  --tech-muted: #A2A2BF;
+  --tech-muted: #a2a2bf;
   --tech-border: rgba(255, 255, 255, 0.07);
 }
 
@@ -116,8 +116,13 @@
 
   /* Accent pulsante para badge "available for work" */
   @keyframes pulse-dot {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
   }
 
   .pulse-dot {
@@ -172,7 +177,7 @@
   /* Hover nos links de nav */
   .nav-link {
     position: relative;
-    color: #A2A2BF;
+    color: #a2a2bf;
     transition: color 0.2s ease;
   }
 
