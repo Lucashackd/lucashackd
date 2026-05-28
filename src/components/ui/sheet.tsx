@@ -78,7 +78,7 @@ function SheetContent({
         <SheetPrimitive.Title className="sr-only">{title}</SheetPrimitive.Title>
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close className="focus:ring-ring absolute top-4 right-4 rounded-full bg-[#0a0a0f]/20 p-2 text-[#7a7a90] opacity-80 transition hover:text-[#00e5a0] hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
+          <SheetPrimitive.Close className="focus:ring-ring absolute top-4 right-4 rounded-full bg-[#0a0a0f]/20 p-2 text-[#A2A2BF] opacity-80 transition hover:text-[#00e5a0] hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
             <XIcon className="size-4" />
             <span className="sr-only">Close</span>
           </SheetPrimitive.Close>

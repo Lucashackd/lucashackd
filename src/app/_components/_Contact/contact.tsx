@@ -40,7 +40,7 @@ function Contact() {
             <h2 className="mb-2 text-3xl font-bold text-[#f0f0f5] sm:text-4xl">
               Vamos <span className="text-[#00e5a0]">trabalhar juntos</span>
             </h2>
-            <p className="font-mono text-sm text-[#7a7a90]">
+            <p className="font-mono text-sm text-[#A2A2BF]">
               // aberto a oportunidades e colaborações
             </p>
           </div>

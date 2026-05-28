@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
 
-          <div className="space-y-6 text-sm leading-relaxed text-[#7a7a90] sm:text-base">
+          <div className="space-y-6 text-sm leading-relaxed text-[#A2A2BF] sm:text-base">
             <p>
               Olá, sou o Lucas! Como Tecnólogo em Sistemas para Internet e
               Desenvolvedor Full-Stack, meu foco principal é a arquitetura e a
@@ -99,19 +99,19 @@ function About() {
           <div className="flex gap-8 border-t border-white/[0.07] pt-5">
             <div>
               <p className="font-mono text-2xl font-bold text-[#00e5a0]">3+</p>
-              <p className="text-xs tracking-widest text-[#7a7a90] uppercase">
+              <p className="text-xs tracking-widest text-[#A2A2BF] uppercase">
                 anos exp.
               </p>
             </div>
             <div>
               <p className="font-mono text-2xl font-bold text-[#00e5a0]">10+</p>
-              <p className="text-xs tracking-widest text-[#7a7a90] uppercase">
+              <p className="text-xs tracking-widest text-[#A2A2BF] uppercase">
                 tecnologias
               </p>
             </div>
             <div>
               <p className="font-mono text-2xl font-bold text-[#00e5a0]">15+</p>
-              <p className="text-xs tracking-widest text-[#7a7a90] uppercase">
+              <p className="text-xs tracking-widest text-[#A2A2BF] uppercase">
                 projetos
               </p>
             </div>

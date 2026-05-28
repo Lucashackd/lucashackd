@@ -20,14 +20,14 @@ function ProjectCard(project: ProjectCard) {
         {/* Conteúdo */}
         <div className="flex flex-1 flex-col gap-3 p-4">
           <div>
-            <p className="mb-1 font-mono text-[10px] text-[#7a7a90]">
+            <p className="mb-1 font-mono text-[10px] text-[#A2A2BF]">
               {/* Número do projeto é definido no pai — aqui deixamos o título ocupar */}
             </p>
             <h3 className="text-sm font-semibold text-[#f0f0f5]">
               {project.title}
             </h3>
           </div>
-          <p className="flex-1 whitespace-pre-wrap text-xs leading-relaxed text-[#7a7a90]">
+          <p className="flex-1 whitespace-pre-wrap text-xs leading-relaxed text-[#A2A2BF]">
             {project.description}
           </p>
         </div>
@@ -46,7 +46,7 @@ function ProjectCard(project: ProjectCard) {
                 href={String(link.url)}
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-full w-12 items-center justify-center text-[#7a7a90] transition-colors duration-200 hover:bg-[#1a1a24] hover:text-[#00e5a0]"
+                className="flex h-full w-12 items-center justify-center text-[#A2A2BF] transition-colors duration-200 hover:bg-[#1a1a24] hover:text-[#00e5a0]"
                 aria-label={link.type}
               >
                 <Icon size={16} />

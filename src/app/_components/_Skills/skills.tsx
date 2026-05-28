@@ -26,11 +26,11 @@ function Skills() {
       <div className="mt-5 flex items-center gap-5">
         <div className="flex items-center gap-2">
           <span className="inline-block h-2 w-2 rounded-sm bg-[#00e5a0]" />
-          <span className="font-mono text-[10px] text-[#7a7a90]">primário</span>
+          <span className="font-mono text-[10px] text-[#A2A2BF]">primário</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="inline-block h-2 w-2 rounded-sm bg-[#7c6fff]" />
-          <span className="font-mono text-[10px] text-[#7a7a90]">
+          <span className="font-mono text-[10px] text-[#A2A2BF]">
             secundário
           </span>
         </div>

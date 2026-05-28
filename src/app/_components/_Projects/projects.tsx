@@ -70,7 +70,7 @@ function Projects() {
         {projects.map((p) => (
           <div key={p.num} className="flex flex-col gap-0">
             {/* Numeração acima do card */}
-            <p className="mb-1.5 font-mono text-[10px] text-[#7a7a90]">
+            <p className="mb-1.5 font-mono text-[10px] text-[#A2A2BF]">
               {p.num} — {p.type}
             </p>
             <ProjectCard

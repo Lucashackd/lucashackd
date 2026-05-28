@@ -57,14 +57,14 @@ function Navigation() {
             className="flex flex-col gap-[5px] p-1 md:hidden"
             aria-label="Abrir menu"
           >
-            <span className="block h-[1.5px] w-5 bg-[#7a7a90]" />
-            <span className="block h-[1.5px] w-5 bg-[#7a7a90]" />
-            <span className="block h-[1.5px] w-5 bg-[#7a7a90]" />
+            <span className="block h-[1.5px] w-5 bg-[#A2A2BF]" />
+            <span className="block h-[1.5px] w-5 bg-[#A2A2BF]" />
+            <span className="block h-[1.5px] w-5 bg-[#A2A2BF]" />
           </button>
         </SheetTrigger>
 
         <SheetContent side="right">
-          <p className="mt-2 mb-8 font-mono text-xs tracking-widest text-[#7a7a90] uppercase">
+          <p className="mt-2 mb-8 font-mono text-xs tracking-widest text-[#A2A2BF] uppercase">
             // navegação
           </p>
 
@@ -86,7 +86,7 @@ function Navigation() {
           </nav>
 
           <div className="mt-auto border-t border-white/[0.07] pt-4">
-            <p className="font-mono text-[10px] text-[#7a7a90]">
+            <p className="font-mono text-[10px] text-[#A2A2BF]">
               lucashackd.dev
             </p>
           </div>
