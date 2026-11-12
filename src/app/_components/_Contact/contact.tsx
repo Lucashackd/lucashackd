@@ -27,20 +27,20 @@ const links = [
 
 function Contact() {
   return (
-    <section id="contact" className="border-t border-white/[0.07] bg-[#0a0a0f]">
+    <section id="contact" className="border-t border-white/[0.07] bg-[#0a0908]">
       <div className="container mx-auto px-4 py-20 sm:px-6">
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Tag de seção */}
-          <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+          <span className="bg-[#c6a76b]/08 rounded border border-[#c6a76b]/15 px-2.5 py-1 font-mono text-[11px] text-[#c6a76b]">
             04 / contato
           </span>
 
           {/* Título */}
           <div>
-            <h2 className="mb-2 text-3xl font-bold text-[#f0f0f5] sm:text-4xl">
-              Vamos <span className="text-[#00e5a0]">trabalhar juntos</span>
+            <h2 className="mb-2 text-3xl font-bold text-[#eee7d8] sm:text-4xl">
+              Vamos <span className="text-[#c6a76b]">trabalhar juntos</span>
             </h2>
-            <p className="font-mono text-sm text-[#A2A2BF]">
+            <p className="font-mono text-sm text-[#b8ad9a]">
               // aberto a oportunidades e colaborações
             </p>
           </div>
@@ -53,7 +53,7 @@ function Contact() {
                 href={href}
                 target={href.startsWith("mailto") ? "_self" : "_blank"}
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2.5 rounded-lg border border-white/[0.07] bg-[#111118] px-4 py-2.5 text-sm text-[#f0f0f5] transition-all duration-200 hover:border-[#00e5a0]/30 hover:text-[#00e5a0]"
+                className="flex items-center justify-center gap-2.5 rounded-lg border border-white/[0.07] bg-[#15120f] px-4 py-2.5 text-sm text-[#eee7d8] transition-all duration-200 hover:border-[#c6a76b]/30 hover:text-[#c6a76b]"
               >
                 <Icon size={16} className="shrink-0" />
                 <span>{label}</span>
