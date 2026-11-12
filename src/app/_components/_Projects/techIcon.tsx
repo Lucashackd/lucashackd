@@ -13,7 +13,7 @@ function TechIcon(tech: ProjectStack) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <div className="flex h-6 w-6 items-center justify-center rounded border border-white/[0.07] bg-[#1a1a24] p-0.5 transition-colors hover:border-[#00e5a0]/30">
+        <div className="flex h-6 w-6 items-center justify-center rounded border border-white/[0.07] bg-[#211c17] p-0.5 transition-colors hover:border-[#c6a76b]/30">
           <Image
             src={tech.icon}
             alt={tech.name}
@@ -23,8 +23,8 @@ function TechIcon(tech: ProjectStack) {
           />
         </div>
       </TooltipTrigger>
-      <TooltipContent className="border border-white/[0.07] bg-[#1a1a24] text-xs text-[#f0f0f5]">
-        <TooltipArrow className="fill-[#1a1a24]" />
+      <TooltipContent className="border border-white/[0.07] bg-[#211c17] text-xs text-[#eee7d8]">
+        <TooltipArrow className="fill-[#211c17]" />
         <p>{tech.name}</p>
       </TooltipContent>
     </Tooltip>
