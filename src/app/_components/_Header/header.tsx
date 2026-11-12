@@ -1,19 +1,26 @@
+"use client";
 import Navigation from "./navigation";
 
 function Header() {
   return (
-    <header
-      id="header"
-      className="sticky top-0 z-50 w-full border-b border-white/[0.07] bg-[#0a0a0f]/90 backdrop-blur-sm"
-    >
-      <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
-        <span className="font-mono text-sm tracking-widest text-[#00e5a0] sm:text-base">
-          lucashackd.dev
-        </span>
+    <>
+      <header className="mobile-topbar md:hidden">
+        <a href="#about" className="brand-mark" aria-label="Ir para o início">
+          <span className="brand-monogram">LH</span>
+          <span className="brand-wordmark"><strong>Lucas Hackbart Döhnert</strong><small>Desenvolvedor Full Stack</small></span>
+        </a>
         <Navigation />
-      </div>
-    </header>
+      </header>
+      <aside id="header" className="desktop-sidebar hidden md:flex">
+        <a href="#about" className="brand-mark" aria-label="Ir para o início">
+          <span className="brand-monogram">LH</span>
+          <span className="brand-wordmark"><strong>Lucas Hackbart Döhnert</strong><small>Desenvolvedor Full Stack</small></span>
+        </a>
+        <div className="sidebar-divider"><span>COMPÊNDIO</span></div>
+        <Navigation />
+        <div className="sidebar-bottom"><span className="sidebar-rune">✦</span><p>Uma jornada através<br />de ideias e tecnologia.</p><span className="sidebar-version">PORTFÓLIO · 2026</span></div>
+      </aside>
+    </>
   );
 }
-
 export default Header;
