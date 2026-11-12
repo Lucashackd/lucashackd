@@ -57,7 +57,7 @@ function Projects() {
     <section id="projects" className="container mx-auto px-4 py-16 sm:px-6">
       {/* Header da seção */}
       <div className="mb-8 flex items-center gap-3">
-        <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+        <span className="bg-[#c6a76b]/08 rounded border border-[#c6a76b]/15 px-2.5 py-1 font-mono text-[11px] text-[#c6a76b]">
           03 / projetos
         </span>
       </div>
@@ -67,7 +67,7 @@ function Projects() {
         {projects.map((p) => (
           <div key={p.num} className="flex flex-col gap-0">
             {/* Numeração acima do card */}
-            <p className="mb-1.5 font-mono text-[10px] text-[#A2A2BF]">
+            <p className="mb-1.5 font-mono text-[10px] text-[#b8ad9a]">
               {p.num} — {p.type}
             </p>
             <ProjectCard
@@ -86,7 +86,7 @@ function Projects() {
           href="https://github.com/lucashackd"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 rounded-lg border border-white/[0.07] bg-[#111118] px-5 py-2.5 text-sm text-[#f0f0f5] transition-all duration-200 hover:border-[#00e5a0]/30 hover:text-[#00e5a0]"
+          className="flex items-center gap-2 rounded-lg border border-white/[0.07] bg-[#15120f] px-5 py-2.5 text-sm text-[#eee7d8] transition-all duration-200 hover:border-[#c6a76b]/30 hover:text-[#c6a76b]"
         >
           <span>Mais no GitHub</span>
           <ArrowRight size={15} />
