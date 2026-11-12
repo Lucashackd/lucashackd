@@ -12,7 +12,7 @@ function ProjectCard(project: ProjectCard) {
   };
 
   return (
-    <div className="card-accent-top flex h-full flex-col rounded-xl border border-white/[0.07] bg-[#111118] transition-colors duration-200 hover:border-[#00e5a0]/20">
+    <div className="card-accent-top flex h-full flex-col rounded-xl border border-white/[0.07] bg-[#15120f] transition-colors duration-200 hover:border-[#c6a76b]/20">
 
       {/* Corpo do card */}
       <div className="flex flex-1 items-stretch">
@@ -20,21 +20,21 @@ function ProjectCard(project: ProjectCard) {
         {/* Conteúdo */}
         <div className="flex flex-1 flex-col gap-3 p-4">
           <div>
-            <p className="mb-1 font-mono text-[10px] text-[#A2A2BF]">
+            <p className="mb-1 font-mono text-[10px] text-[#b8ad9a]">
               {/* Número do projeto é definido no pai — aqui deixamos o título ocupar */}
             </p>
-            <h3 className="text-sm font-semibold text-[#f0f0f5]">
+            <h3 className="text-sm font-semibold text-[#eee7d8]">
               {project.title}
             </h3>
           </div>
-          <p className="flex-1 whitespace-pre-wrap text-xs leading-relaxed text-[#A2A2BF]">
+          <p className="flex-1 whitespace-pre-wrap text-xs leading-relaxed text-[#b8ad9a]">
             {project.description}
           </p>
         </div>
 
         {/* Ações (links) — coluna lateral direita */}
         <div
-          className={`flex flex-col items-center border-l border-white/[0.07] bg-[#0a0a0f] ${
+          className={`flex flex-col items-center border-l border-white/[0.07] bg-[#0a0908] ${
             project.links.length < 3 ? "justify-center" : "justify-between"
           }`}
         >
@@ -46,7 +46,7 @@ function ProjectCard(project: ProjectCard) {
                 href={String(link.url)}
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-full w-12 items-center justify-center text-[#A2A2BF] transition-colors duration-200 hover:bg-[#1a1a24] hover:text-[#00e5a0]"
+                className="flex h-full w-12 items-center justify-center text-[#b8ad9a] transition-colors duration-200 hover:bg-[#211c17] hover:text-[#c6a76b]"
                 aria-label={link.type}
               >
                 <Icon size={16} />
