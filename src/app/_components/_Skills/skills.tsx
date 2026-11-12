@@ -6,7 +6,7 @@ function Skills() {
     <section id="skills" className="container mx-auto px-4 py-16 sm:px-6">
       {/* Header da seção */}
       <div className="mb-8 flex items-center gap-3">
-        <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+        <span className="bg-[#c6a76b]/08 rounded border border-[#c6a76b]/15 px-2.5 py-1 font-mono text-[11px] text-[#c6a76b]">
           02 / skills
         </span>
       </div>
@@ -22,12 +22,12 @@ function Skills() {
       {/* Legenda */}
       <div className="mt-5 flex items-center gap-5">
         <div className="flex items-center gap-2">
-          <span className="inline-block h-2 w-2 rounded-sm bg-[#00e5a0]" />
-          <span className="font-mono text-[10px] text-[#A2A2BF]">primário</span>
+          <span className="inline-block h-2 w-2 rounded-sm bg-[#c6a76b]" />
+          <span className="font-mono text-[10px] text-[#b8ad9a]">primário</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="inline-block h-2 w-2 rounded-sm bg-[#7c6fff]" />
-          <span className="font-mono text-[10px] text-[#A2A2BF]">
+          <span className="inline-block h-2 w-2 rounded-sm bg-[#8f5550]" />
+          <span className="font-mono text-[10px] text-[#b8ad9a]">
             secundário
           </span>
         </div>
