@@ -10,7 +10,7 @@ function About() {
     >
       {/* Header da seção */}
       <div className="mb-8 flex items-center gap-3">
-        <span className="bg-[#00e5a0]/08 rounded border border-[#00e5a0]/15 px-2.5 py-1 font-mono text-[11px] text-[#00e5a0]">
+        <span className="bg-[#c6a76b]/08 rounded border border-[#c6a76b]/15 px-2.5 py-1 font-mono text-[11px] text-[#c6a76b]">
           01 / sobre mim
         </span>
       </div>
@@ -20,15 +20,15 @@ function About() {
         {/* Texto */}
         <div className="order-2 flex flex-col gap-5 lg:order-1">
           <div>
-            <h1 className="text-4xl leading-tight font-bold text-[#f0f0f5] sm:text-5xl lg:text-5xl">
-              Lucas <span className="text-[#00e5a0]">Döhnert</span>
+            <h1 className="text-4xl leading-tight font-bold text-[#eee7d8] sm:text-5xl lg:text-5xl">
+              Lucas <span className="text-[#c6a76b]">Döhnert</span>
             </h1>
-            <p className="mt-2 font-mono text-sm text-[#7c6fff] sm:text-base">
+            <p className="mt-2 font-mono text-sm text-[#8f5550] sm:text-base">
               $ full_stack_developer
             </p>
           </div>
 
-          <div className="space-y-6 text-justify text-sm leading-relaxed text-[#A2A2BF] sm:text-base">
+          <div className="space-y-6 text-justify text-sm leading-relaxed text-[#b8ad9a] sm:text-base">
             <p>
               Olá, sou o Lucas! Como Tecnólogo em Sistemas para Internet e
               Desenvolvedor Full-Stack, meu foco principal é a arquitetura e a
@@ -80,7 +80,7 @@ function About() {
                   .querySelector("#projects")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="rounded-md bg-[#00e5a0] px-5 py-2.5 text-sm font-bold text-[#0a0a0f] transition-opacity duration-200 hover:opacity-90"
+              className="rounded-md bg-[#c6a76b] px-5 py-2.5 text-sm font-bold text-[#0a0908] transition-opacity duration-200 hover:opacity-90"
             >
               Ver projetos
             </a>
@@ -88,7 +88,7 @@ function About() {
             <a
               href="/docs/Lucas_Dohnert_Desenvolvedor_Full_Stack.pdf"
               download={"Lucas_Dohnert_Desenvolvedor_Full_Stack.pdf"}
-              className="rounded-md border border-white/[0.07] px-5 py-2.5 text-sm text-[#f0f0f5] transition-colors duration-200 hover:border-[#00e5a0]/40 hover:text-[#00e5a0]"
+              className="rounded-md border border-white/[0.07] px-5 py-2.5 text-sm text-[#eee7d8] transition-colors duration-200 hover:border-[#c6a76b]/40 hover:text-[#c6a76b]"
             >
               Download CV
             </a>
@@ -97,20 +97,20 @@ function About() {
           {/* Stats */}
           <div className="flex gap-8 border-t border-white/[0.07] pt-5">
             <div>
-              <p className="font-mono text-2xl font-bold text-[#00e5a0]">3+</p>
-              <p className="text-xs tracking-widest text-[#A2A2BF] uppercase">
+              <p className="font-mono text-2xl font-bold text-[#c6a76b]">3+</p>
+              <p className="text-xs tracking-widest text-[#b8ad9a] uppercase">
                 anos exp.
               </p>
             </div>
             <div>
-              <p className="font-mono text-2xl font-bold text-[#00e5a0]">10+</p>
-              <p className="text-xs tracking-widest text-[#A2A2BF] uppercase">
+              <p className="font-mono text-2xl font-bold text-[#c6a76b]">10+</p>
+              <p className="text-xs tracking-widest text-[#b8ad9a] uppercase">
                 tecnologias
               </p>
             </div>
             <div>
-              <p className="font-mono text-2xl font-bold text-[#00e5a0]">15+</p>
-              <p className="text-xs tracking-widest text-[#A2A2BF] uppercase">
+              <p className="font-mono text-2xl font-bold text-[#c6a76b]">15+</p>
+              <p className="text-xs tracking-widest text-[#b8ad9a] uppercase">
                 projetos
               </p>
             </div>
@@ -134,7 +134,7 @@ function About() {
 
           {/* Layout MD: duas imagens lado a lado */}
           <div className="hidden gap-6 md:flex lg:hidden">
-            <div className="relative flex-1 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24]">
+            <div className="relative flex-1 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#211c17]">
               <span className="photo-corner photo-corner-tl" />
               <span className="photo-corner photo-corner-br" />
 
@@ -149,7 +149,7 @@ function About() {
               />
             </div>
 
-            <div className="relative flex-1 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24]">
+            <div className="relative flex-1 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#211c17]">
               <span className="photo-corner photo-corner-tl" />
               <span className="photo-corner photo-corner-br" />
 
@@ -166,7 +166,7 @@ function About() {
 
           {/* Layout LG: pilha de imagens */}
           <div className="hidden w-full max-w-[28rem] flex-col gap-6 lg:flex xl:hidden">
-            <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24]">
+            <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#211c17]">
               <span className="photo-corner photo-corner-tl" />
               <span className="photo-corner photo-corner-br" />
 
@@ -181,7 +181,7 @@ function About() {
               />
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24]">
+            <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#211c17]">
               <span className="photo-corner photo-corner-tl" />
               <span className="photo-corner photo-corner-br" />
 
@@ -199,7 +199,7 @@ function About() {
           {/* Layout XL: sobreposição tipo baralho */}
           <div className="relative hidden h-[32rem] w-[28rem] xl:flex">
             {/* Primeira imagem - acima e à esquerda */}
-            <div className="absolute -top-16 -left-16 z-20 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24]">
+            <div className="absolute -top-16 -left-16 z-20 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#211c17]">
               <span className="photo-corner photo-corner-tl" />
               <span className="photo-corner photo-corner-br" />
 
@@ -215,7 +215,7 @@ function About() {
             </div>
 
             {/* Segunda imagem - abaixo e à direita */}
-            <div className="absolute right-0 bottom-0 z-10 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1a1a24] shadow-lg shadow-black/40">
+            <div className="absolute right-0 bottom-0 z-10 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#211c17] shadow-lg shadow-black/40">
               <span className="photo-corner photo-corner-tl" />
               <span className="photo-corner photo-corner-br" />
 
