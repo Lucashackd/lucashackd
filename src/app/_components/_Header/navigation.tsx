@@ -33,7 +33,7 @@ function Navigation() {
     </ul></nav>
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild><button type="button" className="mobile-menu-trigger md:hidden" aria-label="Abrir menu de navegação"><Menu size={21} /><span>MENU</span></button></SheetTrigger>
-      <SheetContent side="right" className="mobile-sheet">
+      <SheetContent side="right" className="mobile-sheet" showCloseButton={false}>
         <div className="mobile-sheet-heading"><div><span className="eyebrow">MENU DE NAVEGAÇÃO</span><SheetTitle>Escolha seu caminho</SheetTitle></div>
           <button type="button" onClick={() => setIsOpen(false)} className="mobile-sheet-close" aria-label="Fechar menu"><X size={18} /></button></div>
         <nav aria-label="Navegação móvel"><ul className="mobile-nav-list">
