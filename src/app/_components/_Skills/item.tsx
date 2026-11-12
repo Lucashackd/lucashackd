@@ -30,7 +30,7 @@ function Item({ skill }: { skill: Skill[] }) {
             <div className="flex min-w-0 items-center gap-2">
               <span
                 className={`inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
-                  color === "green" ? "bg-[#00e5a0]" : "bg-[#7c6fff]"
+                  color === "green" ? "bg-[#c6a76b]" : "bg-[#8f5550]"
                 }`}
               />
               <div className="flex h-4 w-4 shrink-0 items-center justify-center">
@@ -42,7 +42,7 @@ function Item({ skill }: { skill: Skill[] }) {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="truncate text-xs text-[#f0f0f5]">{s.name}</span>
+              <span className="truncate text-xs text-[#eee7d8]">{s.name}</span>
             </div>
 
             {/* Segmentos de nível */}
