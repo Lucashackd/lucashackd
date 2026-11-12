@@ -42,3 +42,77 @@ footer { border-color: rgba(198,167,107,.2) !important; background: #090807 !imp
 @media (max-width:767px) { .realm-grid { width: 100%; opacity: .055; } #about { padding-top: 2.6rem; padding-bottom: 3.5rem; } #about h1 { font-size: clamp(2.4rem,12vw,3.4rem); } #about .text-justify { text-align: left; } #about .flex.gap-8 { gap: 1.2rem; } #about .flex.gap-8 p:first-child { font-size: 1.45rem; } #skills,#projects { padding-top: 2rem; padding-bottom: 3.5rem; } #contact > div { padding-top: 4rem; padding-bottom: 4rem; } footer > div { flex-direction: column; gap: 8px; align-items: flex-start !important; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } #about .relative.overflow-hidden:hover,#about .relative.flex-1:hover,#skills .rounded-xl:hover,#projects .card-accent-top:hover { transform: none !important; } }
 .realm-orb-one::before,.realm-orb-one::after { content: ""; position: absolute; inset: 12%; border: 1px solid rgba(198,167,107,.35); border-radius: 50%; transform: perspective(520px) rotateX(67deg) rotateZ(-24deg); box-shadow: 0 0 28px rgba(198,167,107,.08),inset 0 0 24px rgba(198,167,107,.05); } .realm-orb-one::after { inset: 3%; border-color: rgba(198,167,107,.16); transform: perspective(520px) rotateX(67deg) rotateZ(34deg); }
+
+/* Correção do cabeçalho mobile: o botão não deve aparecer no menu desktop. */
+.mobile-topbar {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.mobile-topbar > .brand-mark {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mobile-topbar .brand-wordmark {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mobile-topbar .brand-wordmark strong,
+.mobile-topbar .brand-wordmark small {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-menu-trigger {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .mobile-topbar,
+  .mobile-menu-trigger {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-topbar {
+    gap: 0.5rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .mobile-topbar .brand-mark {
+    gap: 0.5rem;
+  }
+
+  .mobile-topbar .brand-wordmark strong {
+    font-size: 10px;
+  }
+
+  .mobile-topbar .brand-wordmark small {
+    font-size: 7px;
+    letter-spacing: 0.08em;
+  }
+
+  .mobile-menu-trigger {
+    padding-right: 0.65rem;
+    padding-left: 0.65rem;
+  }
+
+  .mobile-menu-trigger span {
+    display: none;
+  }
+}
