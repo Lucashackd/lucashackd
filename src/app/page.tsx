@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import About from "./_components/_About/about";
 import Contact from "./_components/_Contact/contact";
 import Footer from "./_components/_Footer/footer";
@@ -13,6 +13,43 @@ type SectionId = (typeof sectionIds)[number];
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<SectionId>("about");
+
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 1023px)");
+    let observer: IntersectionObserver | null = null;
+
+    const connectObserver = () => {
+      observer?.disconnect();
+      observer = null;
+      if (!media.matches) return;
+
+      const sections = sectionIds
+        .map((sectionId) => document.getElementById(sectionId))
+        .filter((section): section is HTMLElement => Boolean(section));
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (visible) setActiveSection(visible.target.id as SectionId);
+        },
+        { rootMargin: "-18% 0px -58% 0px", threshold: [0.05, 0.2, 0.45] },
+      );
+
+      sections.forEach((section) => observer?.observe(section));
+    };
+
+    connectObserver();
+    media.addEventListener("change", connectObserver);
+
+    return () => {
+      media.removeEventListener("change", connectObserver);
+      observer?.disconnect();
+    };
+  }, []);
 
   const navigateToSection = useCallback((sectionId: string) => {
     if (!sectionIds.includes(sectionId as SectionId)) return;
@@ -39,16 +76,16 @@ export default function Home() {
             <span className="realm-grid" />
           </div>
 
-          <div className={"portfolio-panel panel-about " + (activeSection === "about" ? "is-active" : "")} data-section="about" aria-hidden={activeSection !== "about"}>
+          <div className={"portfolio-panel panel-about " + (activeSection === "about" ? "is-active" : "")} data-section="about">
             <About onNavigate={navigateToSection} />
           </div>
-          <div className={"portfolio-panel panel-skills " + (activeSection === "skills" ? "is-active" : "")} data-section="skills" aria-hidden={activeSection !== "skills"}>
+          <div className={"portfolio-panel panel-skills " + (activeSection === "skills" ? "is-active" : "")} data-section="skills">
             <Skills />
           </div>
-          <div className={"portfolio-panel panel-projects " + (activeSection === "projects" ? "is-active" : "")} data-section="projects" aria-hidden={activeSection !== "projects"}>
+          <div className={"portfolio-panel panel-projects " + (activeSection === "projects" ? "is-active" : "")} data-section="projects">
             <Projects />
           </div>
-          <div className={"portfolio-panel panel-contact " + (activeSection === "contact" ? "is-active" : "")} data-section="contact" aria-hidden={activeSection !== "contact"}>
+          <div className={"portfolio-panel panel-contact " + (activeSection === "contact" ? "is-active" : "")} data-section="contact">
             <Contact />
           </div>
         </main>
