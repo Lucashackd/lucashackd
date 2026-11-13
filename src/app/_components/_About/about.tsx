@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 
-function About() {
+type AboutProps = { onNavigate?: (sectionId: string) => void };
+
+function About({ onNavigate }: AboutProps) {
   return (
     <section
       id="about"
@@ -76,9 +78,11 @@ function About() {
               href="#projects"
               onClick={(e) => {
                 e.preventDefault();
-                document
-                  .querySelector("#projects")
-                  ?.scrollIntoView({ behavior: "smooth" });
+                if (onNavigate) {
+                  onNavigate("projects");
+                } else {
+                  document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+                }
               }}
               className="rounded-md bg-[#c6a76b] px-5 py-2.5 text-sm font-bold text-[#0a0908] transition-opacity duration-200 hover:opacity-90"
             >
