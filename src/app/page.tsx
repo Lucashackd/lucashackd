@@ -36,4 +36,67 @@ export default function Home() {
             .filter((entry) => entry.isIntersecting)
             .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-          if (visible) setActiveSection(¶»§q«^
+          if (visible) setActiveSection(visible.target.id as SectionId);
+        },
+        { rootMargin: "-18% 0px -58% 0px", threshold: [0.05, 0.2, 0.45] },
+      );
+
+      sections.forEach((section) => observer?.observe(section));
+    };
+
+    connectObserver();
+    media.addEventListener("change", connectObserver);
+
+    return () => {
+      media.removeEventListener("change", connectObserver);
+      observer?.disconnect();
+    };
+  }, []);
+
+  const navigateToSection = useCallback((sectionId: string) => {
+    if (!sectionIds.includes(sectionId as SectionId)) return;
+
+    const isMobile = window.matchMedia("(max-width: 1023px)").matches;
+    const destination = isMobile && sectionId === "home" ? "about" : sectionId;
+    setActiveSection(destination as SectionId);
+
+    if (isMobile && destination !== "home") {
+      window.requestAnimationFrame(() => {
+        document.getElementById(destination)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }, []);
+
+  return (
+    <div className="portfolio-shell">
+      <div className="ambient-grain" aria-hidden="true" />
+      <Header activeSection={activeSection} onNavigate={navigateToSection} />
+      <div className="portfolio-content md:pl-[18rem]">
+        <main className="portfolio-stage relative flex min-h-screen flex-col">
+          <div className="realm-backdrop" aria-hidden="true">
+            <span className="realm-orb realm-orb-one" />
+            <span className="realm-orb realm-orb-two" />
+            <span className="realm-grid" />
+          </div>
+
+          <div className={"portfolio-panel panel-home " + (activeSection === "home" ? "is-active" : "")} data-section="home">
+            <GuardianShowcase onNavigate={navigateToSection} />
+          </div>
+          <div className={"portfolio-panel panel-about " + (activeSection === "about" ? "is-active" : "")} data-section="about">
+            <About onNavigate={navigateToSection} />
+          </div>
+          <div className={"portfolio-panel panel-skills " + (activeSection === "skills" ? "is-active" : "")} data-section="skills">
+            <Skills />
+          </div>
+          <div className={"portfolio-panel panel-projects " + (activeSection === "projects" ? "is-active" : "")} data-section="projects">
+            <Projects />
+          </div>
+          <div className={"portfolio-panel panel-contact " + (activeSection === "contact" ? "is-active" : "")} data-section="contact">
+            <Contact />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    </div>
+  );
+}
